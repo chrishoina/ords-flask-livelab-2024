@@ -100,4 +100,4 @@ This lab assumes you have:
 ## Acknowledgements
 * **Author** - <Name, Title, Group>
 * **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - <Name, Group, Month Year>
+* **Last Updated By/Date** - Chris Hoina, Database Tools, July 2024

@@ -4,8 +4,6 @@
 
 This workshop illustrates how Oracle REST Data Services (ORDS) can complement an already-existing web application. The sample application found in this workshop uses ORDS, the Flask framework, Jinja2 templating, and *light* JavaScript.
 
-This lab will guide you through obtaining from Oracle Object storage a sample Python application. You will also set up the application's project directories.
-
 Estimated Time: 10 minutes
 
 ### About Product/Technology

@@ -108,4 +108,4 @@ This lab assumes you have:
 
 * **Author** - Chris Hoina, Senior Product Manager, Database Tools
 * **Contributors** - Jeff Smith, Distinguished Product Manager, Database Tools
-* **Last Updated By/Date** - Chris Hoina July, 2024
+* **Last Updated By/Date** - Chris Hoina, Database Tools, July 2024
