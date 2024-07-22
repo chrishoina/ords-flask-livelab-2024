@@ -14,7 +14,7 @@ Estimated Time: 5 minutes
 
 Oracle REST Data Services is a *free* Java application responsible for:
 
-1. Intercepting HTTP/HTTPS web requests, *then*
+1. Listening for and handling HTTP/HTTPS web requests, *then*
 2. As a proxy/universal `ORDS_PUBLIC_USER` database user satisfying these requests, where finally
 3. Responding to the requesting end user, client, or application with the results of that HTTP/HTTPS request
 
@@ -23,17 +23,16 @@ HTTP requests can be one of following methods:
 * `GET`
 * `POST`
 * `PUT`
-* `BATCHLOAD`
+* `PATCH`
 * `UPDATE`
 * `DELETE`
 
-ORDS makes REST-enabling SQL, PL/SQL stored procedures and functions, Views, Tables, and other database objects intuitive and simple. ORDS is pre-installed and configured in all OCI regions, for the Oracle Autonomous Database.  ORDS is also available for download to be installed and configured for your on-premise database deployments. ORDS supports high-availability deployments and can be deployed in your choice of Java Enterprise application server:
+ORDS makes REST-enabling SQL, PL/SQL stored procedures and functions, Views, Tables, and other database objects intuitive and simple. ORDS is pre-installed and configured in all OCI regions, for the Oracle Autonomous Database. ORDS is also available for download to be installed and configured for your on-premise database deployments.
 
-* Jetty
+ORDS supports high-availability deployments, it can be run as a standalone process using the embedded Jetty server, and can also be deployed in your choice of Java Enterprise application servers:
+
 * Oracle WebLogic
 * Apache Tomcat
-
-As you become more familiar with ORDS, you will engineer novel solutions to your ELT and ETL needs.
 
 ### Objectives
 
