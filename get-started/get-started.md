@@ -1,18 +1,12 @@
-# Integrating ORDS APIs into your applications
+# Get Started
 
 ## Introduction
 
 Estimated Time: 10 minutes
 
-### About Product/Technology
+### About Oracle REST Data Services
 
-Oracle REST Data Services is a *free* Java application responsible for:
-
-1. Intercepting HTTP/HTTPS web requests, *then*
-2. As a proxy/universal `ORDS_PUBLIC_USER` database user satisfying these requests, where finally
-3. Responding to the requesting end user, client, or application with the results of that HTTP/HTTPS request
-
-HTTP requests can be one of following methods: `GET`, `POST`, `BATCH LOAD`, `PUT`, `DELETE`. *Although*, ORDS makes REST-enabling SQL, PL/SQL stored procedures and functions, Views, Tables, and other database objects intuitive and simple. As you become more familiar with ORDS, you will engineer novel solutions to your ELT and ETL needs.
+??
 
 ### Objectives
 
@@ -38,20 +32,20 @@ This lab assumes you have:
 
 1. You have been provided two URLs. One is for accessing Database Actions, the other for Jupyter notebook. Navigate to the URL for Database Actions.
 
-2. A new `MOVIE` user has been created for you; its schema REST-enabled. Click `Go` under the SQL Developer Web card, to Sign-in.
+2. A new `MOVIE` user has been created for you; its schema REST-enabled. Click <button type="button" style="pointer-events: none;">Go</button> under the SQL Developer Web card, to Sign-in.
 
    ![Navigating to SQL Developer Web.](images/workshop-presentation-one.png " ")
 
-   Once the Sign-in screen appears, enter the following credentials, and click the `Sign-in` button:
+   Once the Sign-in screen appears, enter the following credentials, and click the <button type="button" style="pointer-events: none;">Sign-in</button> button:
 
-   * Username: `MOVIE`
-   * Password: `LiveLabs.Rocks_99`
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username: `MOVIE`  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password: `LiveLabs.Rocks_99`
   
 3. The Database Actions Launchpad will appear. Navigate to the Development category, then click SQL. A blank SQL Worksheet will appear.
 
    ![A new SQL Worksheet.](images/workshop-presentation-two.png " ")
 
-      > **NOTE:** If this is your first time visiting the SQL Worksheet, a guided tour will appear. You may continue with the tour, or click the `X` (as seen in the image) to exit.
+      > **NOTE:** If this is your first time visiting the SQL Worksheet, a guided tour will appear. You may continue with the tour, or click the <button type="button" style="pointer-events: none;">X</button> (as seen in the image) to exit.
 
 4. You'll notice a `MOVIE` table has already been created for you.
 
@@ -98,7 +92,9 @@ This lab assumes you have:
 
 2. To review the Resource Module, its Resource Templates and Resource Handlers, navigate to the REST Workshop.
 
-   Click the hamburger menu from the top of Database Actions, then click REST.
+   Click the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg> hamburger menu from the top of Database Actions, then click REST.
 
    ![Navigating to the REST Workshop.](images/workshop-presentation-eight.png " ")
 
@@ -152,8 +148,9 @@ This lab assumes you have:
 
 ## Learn More
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [ORDS RESTful services terminology](https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/24.2/orddg/developing-REST-applications.html#GUID-50E24524-32BB-470D-8015-6C25C9B47A44)
+* [Flask installation and configuration](https://flask.palletsprojects.com/en/3.0.x/installation/)
+* [Visual Studio Code Flask tutorial](https://code.visualstudio.com/docs/python/tutorial-flask)
 
 ## Acknowledgements
 
