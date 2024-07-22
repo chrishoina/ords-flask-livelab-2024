@@ -6,7 +6,7 @@ Estimated Time: 10 minutes
 
 ### About Oracle REST Data Services
 
-??
+possibly n/a since we've already discussed
 
 ### Objectives
 
@@ -52,7 +52,10 @@ This lab assumes you have:
 
 4. You'll notice a `MOVIE` table has already been created for you. This table has also been pre-populated with movie data.
 
-   To view a sample of the table's data<span class="fa fa-file-play" aria-hidden="true"></span>, execute the following SQL statement:
+   To view a sample of the table's data<span class="fa fa-file-play" aria-hidden="true"></span> copy and paste the following SQL statement into the SQL Worksheet and click then <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/>
+</svg> `Run Statement` icon.
 
    ```sql
    <copy>
@@ -66,7 +69,15 @@ This lab assumes you have:
 
    ![Reviewing the results.](images/workshop-presentation-four.png " ")
 
-  
+5. You may notice the varied data types of this table. To take a closer look of how this `MOVIE` table is structured, right click on the `MOVIE` table then select `Edit...`.
+
+6. When the `Table Properties` slider appears, click `DDL`, then select the `Create` tab.
+
+   Notice the following datatypes:
+
+   ![Reviewing the Movie table properties.](images/workshop-presentation-four-dot-two.png " ")
+
+      > ORDS APIs will be able to handle all of these various data types and send them to your application.
 
 ## Task 2: Jupyter lab, Part I
 
@@ -74,28 +85,34 @@ This lab assumes you have:
 
    ![Log in to Jupyter lab.](images/workshop-presentation-five.png " ")
   
-2. Once logged in, you will see several directories, and files. Navigate to the `ocw24flask` directory followed by the `scripts` directory.
+2. Once logged in, you will see several directories. Navigate to the `ocw24flask` directory, then the `scripts` directory.
 
-   Once there, you will see several files. Double click the `moviestream_resource_module_definitions.sql` file.
+3. Double click the `moviestream_resource_module_definitions.sql` file. This file contains the definitions for your Resource Module, Templates, and Handlers; these are your ORDS APIs.
   
       ![Reviewing the resource definitions file.](images/workshop-presentation-six.png " ")
 
-3. You will select all and copy this file to your clipboard. Then, return to the SQL Worksheet.
+4. Next, select all and copy the contents to your clipboard. Then, return to the SQL Worksheet.
 
 ## Task 3: Database Actions, Part II
 
-1. Navigate to the SQL Worksheet. Then paste the contents of the SQL file to the SQL Worksheet.
+1. Navigate to the SQL Worksheet. Then paste the contents of the `moviestream_resource_module_definitions.sql` file to the SQL Worksheet.
 
+   **To be included in the non-sandbox version:**  
    Pay special attention to the `ORDS.ENABLE_SCHEMA` procedure. Verify the two parameters match the following:
 
    * `p_schema => 'MOVIE'`
    * `p_url_mapping_pattern => 'movie'`
 
-   Once you have verified that these parameters are correct, click the `Run Script` icon. The script will run and a `PL/SQL procedure successfully completed.` message will appear in the Output panel's Script Output tab.
+   Once you have verified that these parameters are correct
+  
+2. Click the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-play" viewBox="0 0 16 16">
+  <path d="M6 10.117V5.883a.5.5 0 0 1 .757-.429l3.528 2.117a.5.5 0 0 1 0 .858l-3.528 2.117a.5.5 0 0 1-.757-.43z"/>
+  <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1"/>
+</svg> `Run Script` icon. Upon completion, a `PL/SQL procedure successfully completed.` message will appear in the `Script Output` tab.
 
-      ![Running the resource module script.](images/workshop-presentation-seven.png " ")
+   ![Running the resource module script.](images/workshop-presentation-seven.png " ")
 
-2. To review the Resource Module, its Resource Templates and Resource Handlers, navigate to the REST Workshop.
+3. You've just created the ORDS APIs for the `Movie` user. To review the Resource Module, its Resource Templates and Resource Handlers, navigate to the REST Workshop.
 
    Click the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
@@ -103,15 +120,17 @@ This lab assumes you have:
 
    ![Navigating to the REST Workshop.](images/workshop-presentation-eight.png " ")
 
-3. You'll notice a single Module in the Workshop Objects. Click it, then click the `moviestream` card.
+4. You'll notice a single Module in the Workshop's Object panel. Click it, then click the `moviestream` card.
 
    ![Navigating to the moviestream resource module.](images/workshop-presentation-nine.png " ")
 
-4. You'll now see the newly created Resource Templates. Each of the templates contains a single `GET` Resource Handler. These are your ORDS APIs, you'll rely on them to feed data to your application.
+5. You'll now see the newly created Resource Templates. Each of the Templates contains a single `GET` Resource Handler. These are your ORDS APIs, you'll rely on them to feed data to your application.
 
    ![Acknowledging the resource templates.](images/workshop-presentation-ten.png " ")
 
-5. You will need to copy each of these URI's to your clipboard. In a few moments, you will return to the Jupyter lab to input these into the application code.
+6. You will need to copy each of these URI's to your clipboard.
+
+   > In a few moments, you will return to the Jupyter lab to input these into the application code.
 
    ![Adding the ORDS URIs to the clipboard](images/workshop-presentation-eleven.png " ")
 
@@ -139,7 +158,9 @@ This lab assumes you have:
 
 1. From the Jupyter Launcher, open a new Terminal. If you are not in the `ords24flask` folder, then `cd` to it. Issue the `ls` command to verify the `ordsflask.py` file exists.
 
-   Issue the following command: `python ordsflask.py`. The Flask development server will start up.
+   Issue the following command: `python ordsflask.py`.  
+
+   The Flask development server will start up.
 
    ![Executing terminal commands to start the Flask server.](images/workshop-presentation-fifteen.png " ")
 
