@@ -12,16 +12,19 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
-* Retrieve from Oracle Object Storage the sample application project folder
-* Extract the project folder
-* Set up the project
-* Install all required Python dependencies
+* Sign in to Database Actions as the `MOVIE` user
+* Create your ORDS APIs with the provided scripts
+* Add your ORDS APIs to your project's files
+* Start-up a simple ORDS + Python application
+ to
 
 ### Prerequisites
 
 * An OCI Always Free, Free Tier or paid tenancy
-* A provisioned Oracle Autonomous Database
-* Access to Database Actions as the Admin user
+* A provisioned Oracle Autonomous Database and Integrated Developer Environment (IDE), or
+* Access to a LiveLabs-provided sandbox environment
+* Access to Database Actions
+* Beginner level experience in Python, HTML, and Integrated Developer Environments (IDEs)
 
 This lab assumes you have:
 
@@ -30,9 +33,9 @@ This lab assumes you have:
 
 ## Task 1: Database Actions, Part I
 
-1. You have been provided two URLs. One is for accessing Database Actions, the other for Jupyter notebook. Navigate to the URL for Database Actions.
+1. You have been provided two URLs. One for accessing Database Actions, the other for a Jupyter lab. Navigate to Database Actions using the provided URL.
 
-2. A new `MOVIE` user has been created for you; its schema REST-enabled. Click <button type="button" style="pointer-events: none;">Go</button> under the SQL Developer Web card, to Sign-in.
+2. A new `MOVIE` user has been created for you. Its schema has already been REST-enabled, you will be able to Sign in to Database Actions. To Sign in, click the <button type="button" style="pointer-events: none;">Go</button> button under the SQL Developer Web card.
 
    ![Navigating to SQL Developer Web.](images/workshop-presentation-one.png " ")
 
@@ -41,17 +44,15 @@ This lab assumes you have:
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username: `MOVIE`  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password: `LiveLabs.Rocks_99`
   
-3. The Database Actions Launchpad will appear. Navigate to the Development category, then click SQL. A blank SQL Worksheet will appear.
+3. The Database Actions Launchpad will appear. Navigate to the `Development` category, then click `SQL`. A blank SQL Worksheet will appear.
 
    ![A new SQL Worksheet.](images/workshop-presentation-two.png " ")
 
       > **NOTE:** If this is your first time visiting the SQL Worksheet, a guided tour will appear. You may continue with the tour, or click the <button type="button" style="pointer-events: none;">X</button> (as seen in the image) to exit.
 
-4. You'll notice a `MOVIE` table has already been created for you.
+4. You'll notice a `MOVIE` table has already been created for you. This table has also been pre-populated with movie data.
 
-   ![Executing the SQL statement.](images/workshop-presentation-three.png " ")
-
-   To view a sample of the table's data, execute the following SQL statement:
+   To view a sample of the table's data<span class="fa fa-file-play" aria-hidden="true"></span>, execute the following SQL statement:
 
    ```sql
    <copy>
@@ -59,9 +60,13 @@ This lab assumes you have:
    </copy>
    ```
 
-   You should see results similar to the following image:
+   ![Executing the SQL statement.](images/workshop-presentation-three.png " ")
+
+   You will see results similar to the following image:
 
    ![Reviewing the results.](images/workshop-presentation-four.png " ")
+
+  
 
 ## Task 2: Jupyter lab, Part I
 

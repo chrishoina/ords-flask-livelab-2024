@@ -29,7 +29,7 @@ HTTP requests can be one of following methods:
 
 ORDS makes REST-enabling SQL, PL/SQL stored procedures and functions, Views, Tables, and other database objects intuitive and simple. ORDS is pre-installed and configured in all OCI regions, for the Oracle Autonomous Database. ORDS is also available for download to be installed and configured for your on-premise database deployments.
 
-ORDS supports high-availability deployments, it can be run as a standalone process using the embedded Jetty server, and can also be deployed in your choice of Java Enterprise application servers:
+ORDS supports high-availability deployments, it can be run as a standalone process, and can also be deployed in your choice of Java Enterprise application servers:
 
 * Oracle WebLogic
 * Apache Tomcat
@@ -44,13 +44,13 @@ In this lab, you will become acquainted with:
 ### Prerequisites
 
 * An OCI Always Free, Free Tier or paid tenancy
-* A provisioned Oracle Autonomous Database
-* Access to Database Actions
+* A provisioned Oracle Autonomous Database, or
+* Access to a LiveLabs-provided sandbox environment
+* Beginner level experience in Python, HTML, and Integrated Developer Environments (IDEs)
 
 This lab assumes you have:
 
-* An Oracle account, or
-* Access to a LiveLabs-provided sandbox environment
+* An Oracle account
 * All previous labs successfully completed
 
 ## Learn More
