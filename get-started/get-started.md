@@ -128,7 +128,7 @@ This lab assumes you have:
 
    ![Acknowledging the resource templates.](images/workshop-presentation-ten.png " ")
 
-6. You will need to copy each of these URI's to your clipboard.
+6. Next, copy each of these URI's to your clipboard.
 
    > In a few moments, you will return to the Jupyter lab to input these into the application code.
 
