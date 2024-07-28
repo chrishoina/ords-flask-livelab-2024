@@ -2,11 +2,13 @@
 
 ## Introduction
 
+You have been provided with two URIs. One directs you to the Sign in page for Database Actions. A schema has been prepared for you, using the `MOVIE` user. This will be your development user during the course of this workshop.
+
+You have also been provided a URI for accessing Jupyter lab. In this lab you will notice a Python/Flask application, as well as the files and scripts used for the sample ORDS application to run.
+
+Some experience in shell commands, Python, JavaScript, and HTMl are helpful but not necessary. We've designed this workshop so even the beginner can complete it!
+
 Estimated Time: 10 minutes
-
-### About Oracle REST Data Services
-
-possibly n/a since we've already discussed
 
 ### Objectives
 
@@ -16,7 +18,6 @@ In this lab, you will:
 * Create your ORDS APIs with the provided scripts
 * Add your ORDS APIs to your project's files
 * Start-up a simple ORDS + Python application
- to
 
 ### Prerequisites
 
@@ -35,7 +36,7 @@ This lab assumes you have:
 
 1. You have been provided two URLs. One for accessing Database Actions, the other for a Jupyter lab. Navigate to Database Actions using the provided URL.
 
-2. A new `MOVIE` user has been created for you. Its schema has already been REST-enabled, you will be able to Sign in to Database Actions. To Sign in, click the <button type="button" style="pointer-events: none;">Go</button> button under the SQL Developer Web card.
+2. A new `MOVIE` user has been created for you. Its schema has already been REST-enabled; meaning, you will be able to Sign in to Database Actions. To Sign in, click the <button type="button" style="pointer-events: none;">Go</button> button under the SQL Developer Web card.
 
    ![Navigating to SQL Developer Web.](images/workshop-presentation-one.png " ")
 
@@ -48,20 +49,17 @@ This lab assumes you have:
 
    ![A new SQL Worksheet.](images/workshop-presentation-two.png " ")
 
-      > **NOTE:** If this is your first time visiting the SQL Worksheet, a guided tour will appear. You may continue with the tour, or click the <button type="button" style="pointer-events: none;">X</button> (as seen in the image) to exit.
+      ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/></svg> If this is your first time visiting the SQL Worksheet, a guided tour will appear. You may continue with the tour, or click the <button type="button" style="pointer-events: none;">X</button> (as seen in the image) to exit the tour.
 
 4. You'll notice a `MOVIE` table has already been created for you. This table has also been pre-populated with movie data.
 
-   To view a sample of the table's data<span class="fa fa-file-play" aria-hidden="true"></span> copy and paste the following SQL statement into the SQL Worksheet and click then <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
-  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-  <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/>
-</svg> `Run Statement` icon.
+   To view a sample of the table's data<span class="fa fa-file-play" aria-hidden="true"></span> copy and paste the following SQL statement into the SQL Worksheet and click then `Run Statement` icon.
 
-   ```sql
-   <copy>
-   SELECT * FROM MOVIE FETCH FIRST 10 ROWS ONLY;
-   </copy>
-   ```
+      ```sql
+      <copy>
+      SELECT * FROM MOVIE FETCH FIRST 10 ROWS ONLY;
+      </copy>
+      ```
 
    ![Executing the SQL statement.](images/workshop-presentation-three.png " ")
 
@@ -77,11 +75,11 @@ This lab assumes you have:
 
    ![Reviewing the Movie table properties.](images/workshop-presentation-four-dot-two.png " ")
 
-      > ORDS APIs will be able to handle all of these various data types and send them to your application.
+      ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/></svg> ORDS APIs will be able to handle all of these various data types and send them to your application.
 
 ## Task 2: Jupyter lab, Part I
 
-1. Use the second URL you were provided to log in to your Jupyter lab.
+1. Using the second URL you were provided, log in to your Jupyter lab. The password is the same: `LiveLabs.Rocks_99`
 
    ![Log in to Jupyter lab.](images/workshop-presentation-five.png " ")
   
@@ -96,21 +94,14 @@ This lab assumes you have:
 ## Task 3: Database Actions, Part II
 
 1. Navigate to the SQL Worksheet. Then paste the contents of the `moviestream_resource_module_definitions.sql` file to the SQL Worksheet.
-
-   **To be included in the non-sandbox version:**  
-   Pay special attention to the `ORDS.ENABLE_SCHEMA` procedure. Verify the two parameters match the following:
-
-   * `p_schema => 'MOVIE'`
-   * `p_url_mapping_pattern => 'movie'`
-
-   Once you have verified that these parameters are correct
   
-2. Click the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-play" viewBox="0 0 16 16">
-  <path d="M6 10.117V5.883a.5.5 0 0 1 .757-.429l3.528 2.117a.5.5 0 0 1 0 .858l-3.528 2.117a.5.5 0 0 1-.757-.43z"/>
-  <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1"/>
-</svg> `Run Script` icon. Upon completion, a `PL/SQL procedure successfully completed.` message will appear in the `Script Output` tab.
+2. Click the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+</svg> `Run Script` icon. Upon completion, a `PL/SQL procedure successfully completed` message will appear in the `Script Output` tab.
 
    ![Running the resource module script.](images/workshop-presentation-seven.png " ")
+
+   ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/></svg> As you may know, the `MOVIE` schema has already been REST-enabled. For this reason, it is not necessary for you to execute the `ORDS.ENABLE_SCHEMA` PL/SQL procedure. Executing this procedure will cause no disruptions. The full script is provided for your convenience.
 
 3. You've just created the ORDS APIs for the `Movie` user. To review the Resource Module, its Resource Templates and Resource Handlers, navigate to the REST Workshop.
 
@@ -130,7 +121,7 @@ This lab assumes you have:
 
 6. Next, copy each of these URI's to your clipboard.
 
-   > In a few moments, you will return to the Jupyter lab to input these into the application code.
+   ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/></svg> In a few moments, you will return to the Jupyter lab to input these into the application code.
 
    ![Adding the ORDS URIs to the clipboard](images/workshop-presentation-eleven.png " ")
 
@@ -158,13 +149,19 @@ This lab assumes you have:
 
 1. From the Jupyter Launcher, open a new Terminal. If you are not in the `ords24flask` folder, then `cd` to it. Issue the `ls` command to verify the `ordsflask.py` file exists.
 
-   Issue the following command: `python ordsflask.py`.  
+   Issue the following command:
+
+      ```sh
+      <copy>
+      python ordsflask.py
+      </copy>
+      ```  
 
    The Flask development server will start up.
 
    ![Executing terminal commands to start the Flask server.](images/workshop-presentation-fifteen.png " ")
 
-2. Your application will be available on port 5000. However, you will need to open the application in a new tab, and use the same URL for the Jupyter lab and Database Actions instead of the URLs seen in the terminal.
+2. Your application will be available on port 5000. However, you will need to open the application in a new tab. Then using the same URL for Jupyter lab and Database Action, include port 5000. This can bee seen in the following image, as well as your lab's terminal.
 
    Navigate to the new tab and combine the lab's URI with port 5000. Accept any warnings and your application will load.
 
