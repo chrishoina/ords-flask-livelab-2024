@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You can include parameters in your ORDS APIs. In this lab you will learn explore how this is accomplished using two input parameters. You'll also observe how we have introduced the `json_exists` function into a Resource Handler.
+You can include parameters in your ORDS APIs. In this lab you will explore how this is done in an example that uses two input parameters. You'll also observe how we have introduced the `json_exists` function into a Resource Handler.
 
 Estimated Time: 20 minutes
 
@@ -11,9 +11,8 @@ Estimated Time: 20 minutes
 In this lab, you will:
 
 * Execute Resource Handler code for the `/movie-all` API
-* Explore Bind parameters in an ORDS API
+* Explore bind parameters in an ORDS API
 * Manually append query parameters into the `/movie-all` ORDS URI
-* [relative lab url test](?lab=need-help)
 
 ### Prerequisites (Optional)
 
@@ -55,11 +54,11 @@ This lab assumes you have:
       ORDER BY RUNTIME DESC
     ```
 
-2. If you recall from previous Live Labs, you'll recognize this `MOVIE` table. It is comprised of various datatypes. One such is the `JSON` datatype. In this example, you'll see how ORDS can REST-enable functions such as `JSON_EXISTS`.
+2. If you recall from previous Live Labs, you'll recognize this `MOVIE` table. It is comprised of various data types. One such is the `JSON` datatype. In this example, you'll see how ORDS can REST-enable functions such as `JSON_EXISTS`.
 
     ![Reviewing the table data; JSON data types.](images/workshop-presentation-six.png " ")
 
-3. Click the `Start` icon, to test the Handler source code. When the Bind Variables dialog appears, enter `Comedy` in the `genre` field and `210` in the `runtime` field.
+3. Click the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" focusable="false"/></svg> Start icon, to test this Resource Handler source code. When the Bind Variables dialog appears, enter `Comedy` in the `genre` field and `210` in the `runtime` field.
 
     ![Inputting bind variables.](images/workshop-presentation-seven.png " ")
 
@@ -75,9 +74,11 @@ This lab assumes you have:
 
 1. The application code might look something like the following image. In this case, the Python `Results` library is used to perform a `GET` request on this ORDS endpoint.
 
-    ![Side-by-side comparison of python code and JSON in browser.](images//workshop-presentation-ten.png " ")
+    ![Side-by-side comparison of python code and JSON in browser.](images/workshop-presentation-ten.png " ")
 
 2. These user selections are passed as Query Parameters - that is, appended to the end of the ORDS URI with the following format:
+
+   ![Reviewing query parameters.](images/workshop-presentation-ten-two.png " ")
 
    ```html
    <copy>https://gf641ea24ecc468-moviestream23ai.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/mymovies/movie-all?genre=Comedy&runtime=210
@@ -86,17 +87,23 @@ This lab assumes you have:
 
 3. Use the above URI as a reference. Navigate to your web browser (changing the details specific to your environment) to review the `JSON` representation of this data.
 
+   ![Reviewing the JSON response in browser.](images/workshop-presentation-ten-three.png " ")
+
 ## Task 4: Putting it all together
 
-1. In this sample application, two lists are created for the subsequent movie table results. One list for table headers, another for the table data.
+1. In this sample application, two lists are created for the subsequent movie table results (also referred to as `movieresults.html`). One list created for table headers, another for the table row data. ORDS supplies these `For` loops with the necessary data. The following image identifies these two sections in the Python code.
 
-    ![Reviewing the python table head and row lists.](images/workshop-presentation-eleven.png " ")
+   ![Reviewing the python table head and row lists.](images/workshop-presentation-eleven.png " ")
 
-2. On this `movieresults.html` page, you'll notice two additional features. Each row in the table contains a `More` modal, click it to reveal additional movie details. Near the end of the `movieresults.html` page you'll find `Previous` and `Next` links. In a later lab we'll explore how ORDS can simplify result pagination.
+2. Once the `movieresults.html` page loads, you'll notice two additional features. Each row in the table contains a `More` modal, click it to reveal additional movie details.
 
-    ![Modal example and pagination.](images/workshop-presentation-twelve.png " ")
+   ![Modal example and pagination.](images/workshop-presentation-twelve.png " ")
 
-3. In the next lab, you'll explore another ORDS endpoint; this one responsible for feeding modals with information related to that target table row.
+   Near the end of the `movieresults.html` page you'll find `Previous` and `Next` links. In a later lab we'll explore how ORDS can simplify result pagination.
+
+   ![Modal example and pagination.](images/workshop-presentatio-thirteen.png " ")
+
+3. In the next lab, you'll explore another ORDS endpoint; this one responsible for feeding the modals information related to its target table row.
 
 ## Learn More
 

@@ -45,33 +45,41 @@ This lab assumes you have:
 
 1. Observe the following SQL in the **Source** section.
 
-    ```sql
-    SELECT * FROM movie wHERE movie_id = :id
-    ```
+   ```sql
+   <copy>
+   SELECT SUMMARY, TITLE, AWARDS, GROSS FROM MOVIE WHERE MOVIE_ID = :ID
+   </copy>
+   ```
 
-2. You can test this endpoint by clicking the `Start` icon. A dialog will appear, choose any number between `0` and `3800`.
+2. You can test this endpoint one of two ways: clicking the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" focusable="false"/></svg> Start icon or opening the results in <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" focusable="false"></svg> a new tab.
 
-    ![Entering in a bind variable for the resource template.](images/workshop-presentation-six.png " ")
+   ![Entering in a bind variable for the resource template.](images/workshop-presentation-five-two.png " ")
 
-   Notice the query results, you will notice the `MOVIE_ID` column matches the same number you selected in the Bind variable dialog.
+   A dialog will appear, choose any number between `0` and `3800`.
 
-   You may also take this `/movie-single/:id` endpoint, and place it in a new browser tab. Replace `:id` with a different number. You'll see the results from this query, but returned in a `JSON` format.
+      ![Entering in a bind variable for the resource template.](images/workshop-presentation-six.png " ")
 
-    ![Viewing the JSON payload in a browser format.](images/workshop-presentation-seven.png " ")
+   Notice the query results. The `MOVIE_ID` column matches the same number you selected in the Bind variable dialog.
 
-3. If it isn't obvious, you should recognize some of the data included in this `JSON` document. But instead of being displayed like this, you've previously seen it displayed in a modal. Like this:
+      ![Entering in a bind variable for the resource template.](images/workshop-presentation-six-two.png " ")
+
+   Depending on how you chose to review the results of ORDS endpoint, your results should look similar to the following:
+
+      ![Viewing the results in the two formats.](images/workshop-presentation-seven.png " ")
+
+3. If it isn't obvious, you should recognize some of the data included in both the `JSON` document and Handler source results (depending on which option you chose to view the results). But instead of being displayed like the above, you've previously seen it displayed in the sample application as a modal. Like this:
 
     ![Image alt text](images/workshop-presentation-eight.png " ")
 
 ## Task 3: Putting it all together
 
-1. You've now seen how this ORDS endpoint works. You've also seen the output in several different presentations. Next we'll explore how easy it is to drop-in this ORDS endpoint into our application's code.
+1. You've now seen how this ORDS endpoint works. You've also seen the output in several different presentations. Next we'll explore how easy it is to add this ORDS endpoint into an application's code.
 
-2. After making their selecting their movie preferences, a user is redirected to a movie results table. From here, the user can click any of the `More` buttons to see a movie's additional details. This is accomplished with a simple Event Listener, and the JavaScript `Fetch()` API.
+2. After a user selects their movie preferences, they are then redirected to a movie results table (i.e., the `movieresults.html` page). From there, the user can click any of the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/></svg> buttons to see a movie's additional details. This is accomplished with a simple Event Listener, and the JavaScript `Fetch()` API.
 
-    ![Image alt text](images/workshop-presentation-nine.png " ")
+    ![Reviewing the fetch api.](images/workshop-presentation-nine.png " ")
 
-   When a user clicks the `More` button, the associated `movie_id` value is used in the Route Pattern of this ORDS endpoint.
+   When a user clicks the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/></svg> button, the associated `movie_id` value is used in the Route Pattern of this ORDS endpoint.
 
      ![Image alt text](images/workshop-presentation-ten.png " ")
 
@@ -86,8 +94,8 @@ This lab assumes you have:
 ## Learn More
 
 * [Using route patterns in ORDS](https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/24.2/orddg/developing-REST-applications.html#GUID-50E24524-32BB-470D-8015-6C25C9B47A44)
-* [ORDS route patterns first introduction](https://blog.cdivilly.com/2015/03/10/route-patterns)
-* [ORDS route patterns background](https://download.oracle.com/otn/java/ords/javadocs/3.0/plugin-api/route-patterns.html?AuthParam=1720464470_9c1ded06a5aabeae295cddc90ff3dfd7)
+* [The ORDS Route Pattern specification](https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/24.2/ordjv/doc-files/route-patterns.html)
+* [**Blog** ORDS route patterns first introduction](https://blog.cdivilly.com/2015/03/10/route-patterns)
 
 ## Acknowledgements
 
