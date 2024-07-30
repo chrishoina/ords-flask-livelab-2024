@@ -71,7 +71,7 @@ This lab assumes you have:
 
 6. When the `Table Properties` slider appears, click `DDL`, then select the `Create` tab.
 
-   Notice the following datatypes:
+   Notice the following data types:
 
    ![Reviewing the Movie table properties.](images/workshop-presentation-four-dot-two.png " ")
 
@@ -160,7 +160,7 @@ This lab assumes you have:
 
    ![Executing terminal commands to start the Flask server.](images/workshop-presentation-fifteen.png " ")
 
-2. Your application will be available on port 5000. However, you will need to open the application in a new tab. Then using the same URL for Jupyter lab and Database Action, include port 5000. This can bee seen in the following image, as well as your lab's terminal.
+2. Your application will be available on port 5000. However, you will need to open the application in a new tab, and modify the URL you were given for the Jupyter lab and Database Actions. This can bee seen in the following image, as well as your lab's terminal.
 
    Navigate to the new tab and combine the lab's URI with port 5000. Accept any warnings and your application will load.
 
