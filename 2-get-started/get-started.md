@@ -6,7 +6,7 @@ You have been provided with two URIs. One directs you to the Sign in page for Da
 
 You have also been provided a URI for accessing Jupyter lab. In this lab you will notice a Python/Flask application, as well as the files and scripts used for the sample ORDS application to run.
 
-Some experience in shell commands, Python, JavaScript, and HTMl are helpful but not necessary. We've designed this workshop so even the beginner can complete it!
+Some experience in shell commands, Python, JavaScript, and HTML are helpful but not necessary. We've designed this workshop so even the beginner can complete it!
 
 Estimated Time: 10 minutes
 
@@ -160,7 +160,7 @@ This lab assumes you have:
 
    ![Executing terminal commands to start the Flask server.](images/workshop-presentation-fifteen.png " ")
 
-2. Your application will be available on port 5000. However, you will need to open the application in a new tab, and modify the URL you were given for the Jupyter lab and Database Actions. This can bee seen in the following image, as well as your lab's terminal.
+2. Your application will be available on port 5000. However, you will need to open the application in a new tab, and modify the URL you were given for the Jupyter lab and Database Actions. This can be seen in the following image, as well as your lab's terminal.
 
    Navigate to the new tab and combine the lab's URI with port 5000. Accept any warnings and your application will load.
 
