@@ -9,31 +9,31 @@
           "title": "Introduction",
           "description": "Introduction",
           "type": "livelabs",
-          "filename": "../../introduction/introduction.md"
+          "filename": "../../introduction/1-introduction.md"
         },
         {
           "title": "Get Started",
           "description": "Get Started",
           "type": "livelabs",
-          "filename": "../../get-started/get-started.md"
+          "filename": "../../get-started/2-get-started.md"
         },
         {
             "title": "Lab 1: Understanding ORDS bind and query parameters",
             "description": "Understanding ORDS bind and query parameters",
             "type": "livelabs",
-            "filename": "../../ords-bind-and-query-parameters/ords-bind-and-query-parameters.md"
+            "filename": "../../ords-bind-and-query-parameters/3-ords-bind-and-query-parameters.md"
         },
         {
             "title": "Lab 2: Understanding ORDS URI Route Patterns",
             "description": "Understanding ORDS URI Route Patterns",
             "type": "livelabs",
-            "filename": "../../ords-uri-route-patterns/ords-route-patterns.md"
+            "filename": "../../ords-uri-route-patterns/4-ords-route-patterns.md"
         },
         {
           "title": "Lab 3: Understanding ORDS Pagination",
           "description": "Understanding ORDS Pagination",
           "type": "livelabs",
-          "filename": "../../ords-pagination/ords-paginagtion.md"
+          "filename": "../../ords-pagination/5-ords-paginagtion.md"
         },
         {
           "title": "Need Help?",
