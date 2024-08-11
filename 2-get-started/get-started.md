@@ -2,9 +2,11 @@
 
 ## Introduction
 
-You have been provided with two URIs. One directs you to the Sign in page for Database Actions. A schema has been prepared for you, using the `MOVIE` user. This will be your development user during the course of this workshop.
+You have been provided with three URIs. One directs you to the Sign-in page for Database Actions. A schema has been prepared for you using the `MOVIE` user, who will be your development user during this workshop.
 
-You have also been provided a URI for accessing Jupyter lab. In this lab you will notice a Python/Flask application, as well as the files and scripts used for the sample ORDS application to run.
+You have also been provided a URI for accessing the Jupyter lab. In this lab, you will notice a Python/Flask application, as well as the files and scripts used to run the sample ORDS application.
+
+Finally, you have been provided a URI to OCI Cloud Storage. This is where the sample application project has been stored; in a `.zip` file.
 
 Some experience in shell commands, Python, JavaScript, and HTML are helpful but not necessary. We've designed this workshop so even the beginner can complete it!
 
@@ -22,11 +24,11 @@ In this lab, you will:
 
 ### Prerequisites
 
-* An OCI Always Free, Free Tier or paid tenancy
+* An OCI Always Free, Free Tier, or paid tenancy
 * A provisioned Oracle Autonomous Database and Integrated Developer Environment (IDE), or
 * Access to a LiveLabs-provided sandbox environment
 * Access to Database Actions
-* Beginner level experience in Python, HTML, and Integrated Developer Environments (IDEs)
+* Beginner-level experience in Python, HTML, and Integrated Developer Environments (IDEs)
 
 This lab assumes you have:
 
@@ -35,13 +37,18 @@ This lab assumes you have:
 
 ## Task 1: Retrieve the project from OCI Cloud Storage
 
-https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ocw24flask.zip
+1. You have been provided three URLs. One for accessing Database Actions, one for accessing a Jupyter lab, and another for retrieving the sample application project file from OCI Cloud Storage. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ocw24flask.zip) to download a copy of the application's project files. If you are unable to click, use the direct link here:
+
+   ```<copy>
+   https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ocw24flask.zip`</copy>
+   ```
+2. Accept any dialogs that may appear, and download the `.zip` file to your `Downloads` folder. If you choose to download this file to another folder, note its location. Later, you will need to transfer this `.zip` file to the Jupyter lab.
 
 ## Task 2: Database Actions, Part I
 
-1. You have been provided two URLs. One for accessing Database Actions, the other for a Jupyter lab. Navigate to Database Actions using the provided URL.
+1. You have been provided two additional URLs. One for accessing Database Actions, and another one for accessing a Jupyter lab. First, navigate to Database Actions using the provided URL.
 
-2. A new `MOVIE` user has been created for you. Its schema has already been REST-enabled; meaning, you will be able to Sign in to Database Actions. To Sign in, click the <button type="button" style="pointer-events: none;">Go</button> button under the SQL Developer Web card.
+2. A new `MOVIE` user has been created for you. Its schema has already been REST-enabled, meaning you will be able to Sign in to Database Actions. To Sign in, click the <button type="button" style="pointer-events: none;">Go</button> button under the SQL Developer Web card.
 
    ![Navigating to SQL Developer Web.](images/workshop-presentation-one.png " ")
 
@@ -72,7 +79,7 @@ https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD
 
    ![Reviewing the results.](images/workshop-presentation-four.png " ")
 
-5. You may notice the varied data types of this table. To take a closer look of how this `MOVIE` table is structured, right click on the `MOVIE` table then select `Edit...`.
+5. You may notice the varied data types in this table. To take a closer look at how this `MOVIE` table is structured, right-click on the `MOVIE` table, then select `Edit...`.
 
 6. When the `Table Properties` slider appears, click `DDL`, then select the `Create` tab.
 
@@ -86,11 +93,11 @@ https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD
 
 1. Using the second URL you were provided, log in to your Jupyter lab. The password is the same: `LiveLabs.Rocks_99`
 
-   ![Log in to Jupyter lab.](images/workshop-presentation-five.png " ")
+   ![Login to Jupyter lab.](images/workshop-presentation-five.png " ")
   
 2. Once logged in, you will see several directories. Navigate to the `ocw24flask` directory, then the `scripts` directory.
 
-3. Double click the `moviestream_resource_module_definitions.sql` file. This file contains the definitions for your Resource Module, Templates, and Handlers; these are your ORDS APIs.
+3. Double-click the `moviestream_resource_module_definitions.sql` file. This file contains the definitions for your Resource Module, Templates, and Handlers, which are your ORDS APIs.
   
       ![Reviewing the resource definitions file.](images/workshop-presentation-six.png " ")
 
@@ -119,7 +126,7 @@ https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD
 
    ![Navigating to the moviestream resource module.](images/workshop-presentation-nine.png " ")
 
-5. You'll now see the newly created Resource Templates. Each of the Templates contains a single `GET` Resource Handler. These are your ORDS APIs, you'll rely on them to feed data to your application.
+5. You'll now see the newly created Resource Templates. Each Template contains a single `GET` Resource Handler. These are your ORDS APIs; you'll rely on them to feed data to your application.
 
    ![Acknowledging the resource templates.](images/workshop-presentation-ten.png " ")
 
@@ -139,13 +146,13 @@ https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD
 
 2. Replace the `r1` temporary URI with the one you captured in the previous lab. The ORDS URI ending in `/movie-genre` will go here. Next, replace the `/r2` temporary URI with the `/movie-all` URI.
 
-   Verify that your `r1` and `r2` variables are structured like those seen in the image. Make sure to save your changes.
+   Verify that your `r1` and `r2` variables are structured like those in the image. Then, save your changes.
 
    ![Locating the ordsflask python file.](images/workshop-presentation-thirteen.png " ")
 
-3. Next, locate the `static` directory, then double click the `functions.js` file. Here you will see another ORDS URI placeholder. Replace it with your `/movie-single/:id` URI.
+3. Next, locate the `static` directory, then double-click the `functions.js` file. Here, you will see another ORDS URI placeholder. Replace it with your `/movie-single/:id` URI.
 
-   Verify your `const response = ...` is structured exactly how the image shows (your URI will differ). Then save your changes.
+   Verify that your `const response = ...` is structured exactly as the image shows (your URI will differ). Then, save your changes.
 
    ![Modifying the function.js file.](images/workshop-presentation-fourteen.png " ")
 
@@ -165,7 +172,7 @@ https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD
 
    ![Executing terminal commands to start the Flask server.](images/workshop-presentation-fifteen.png " ")
 
-2. Your application will be available on port 5000. However, you will need to open the application in a new tab, and modify the URL you were given for the Jupyter lab and Database Actions. This can be seen in the following image, as well as your lab's terminal.
+2. Your application will be available on port 5000. However, you will need to open the application in a new tab and modify the URL you were given for the Jupyter lab and Database Actions. This can be seen in the following image and your lab's terminal.
 
    Navigate to the new tab and combine the lab's URI with port 5000. Accept any warnings and your application will load.
 
