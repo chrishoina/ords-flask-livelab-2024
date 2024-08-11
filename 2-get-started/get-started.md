@@ -51,11 +51,11 @@ This lab assumes you have:
 
    ![Accepting terms to download zip file.](images/workshop-presentation-zero-dot-one.png)
 
-   > ![Info circle image.](images/info-circle.svg) If you choose to download this file to another folder, note its location. Later, you will need to transfer this `.zip` file to the Jupyter lab.
+   > If you choose to download this file to another folder, note its location. Later, you will need to transfer this `.zip` file to the Jupyter lab.
 
 ## Task 2: Database Actions, Part I
 
-1. You <mark>have</mark> been provided two additional URLs. One for accessing Database Actions, and another one for accessing a Jupyter lab. First, navigate to Database Actions using the provided URL.
+1. You have been provided two additional URLs. One for accessing Database Actions, and another one for accessing a Jupyter lab. First, navigate to Database Actions using the provided URL.
 
 2. A new `MOVIE` user has been created for you. Its schema has already been REST-enabled, meaning you will be able to Sign in to Database Actions. To Sign in, click the <button type="button" style="pointer-events: none;">Go</button> button under the SQL Developer Web card.
 
@@ -70,7 +70,7 @@ This lab assumes you have:
 
    ![A new SQL Worksheet.](images/workshop-presentation-two.png " ")
 
-      >![](images/info-circle.svg) If this is your first time visiting the SQL Worksheet, a guided tour will appear. You may continue with the tour, or click the <button type="button" style="pointer-events: none;">X</button> (as seen in the image) to exit the tour.
+      > If this is your first time visiting the SQL Worksheet, a guided tour will appear. You may continue with the tour, or click the <button type="button" style="pointer-events: none;">X</button> (as seen in the image) to exit the tour.
 
 4. You'll notice a `MOVIE` table has already been created for you. This table has also been pre-populated with movie data.
 
