@@ -37,16 +37,25 @@ This lab assumes you have:
 
 ## Task 1: Retrieve the project from OCI Cloud Storage
 
-1. You have been provided three URLs. One for accessing Database Actions, one for accessing a Jupyter lab, and another for retrieving the sample application project file from OCI Cloud Storage. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ocw24flask.zip) to download a copy of the application's project files. If you are unable to click, use the direct link here:
+1. You have been provided three URLs. One for accessing Database Actions, one for accessing a Jupyter lab, and another for retrieving the sample application project file from OCI Cloud Storage. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ocw24flask.zip) to download a copy of the application's project files.  
 
-   ```<copy>
-   https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ocw24flask.zip`</copy>
-   ```
-2. Accept any dialogs that may appear, and download the `.zip` file to your `Downloads` folder. If you choose to download this file to another folder, note its location. Later, you will need to transfer this `.zip` file to the Jupyter lab.
+   If you are unable to click, use the direct link here:  
+
+     ```html
+     <copy>
+     https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ocw24flask.zip
+     </copy>
+     ```
+
+2. Accept any dialogs that may appear, and download the `.zip` file to your `Downloads` folder.  
+
+   ![Accepting terms to download zip file.](images/workshop-presentation-zero-dot-one.png)
+
+   > ![Info circle image.](images/info-circle.svg) If you choose to download this file to another folder, note its location. Later, you will need to transfer this `.zip` file to the Jupyter lab.
 
 ## Task 2: Database Actions, Part I
 
-1. You have been provided two additional URLs. One for accessing Database Actions, and another one for accessing a Jupyter lab. First, navigate to Database Actions using the provided URL.
+1. You <mark>have<mark> been provided two additional URLs. One for accessing Database Actions, and another one for accessing a Jupyter lab. First, navigate to Database Actions using the provided URL.
 
 2. A new `MOVIE` user has been created for you. Its schema has already been REST-enabled, meaning you will be able to Sign in to Database Actions. To Sign in, click the <button type="button" style="pointer-events: none;">Go</button> button under the SQL Developer Web card.
 
@@ -61,7 +70,7 @@ This lab assumes you have:
 
    ![A new SQL Worksheet.](images/workshop-presentation-two.png " ")
 
-      ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/></svg> If this is your first time visiting the SQL Worksheet, a guided tour will appear. You may continue with the tour, or click the <button type="button" style="pointer-events: none;">X</button> (as seen in the image) to exit the tour.
+      >![](images/info-circle.svg) If this is your first time visiting the SQL Worksheet, a guided tour will appear. You may continue with the tour, or click the <button type="button" style="pointer-events: none;">X</button> (as seen in the image) to exit the tour.
 
 4. You'll notice a `MOVIE` table has already been created for you. This table has also been pre-populated with movie data.
 
