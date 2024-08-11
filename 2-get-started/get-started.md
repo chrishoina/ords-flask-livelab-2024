@@ -2,11 +2,9 @@
 
 ## Introduction
 
-You have been provided with three URIs. One directs you to the Sign-in page for Database Actions. A schema has been prepared for you using the `MOVIE` user, who will be your development user during this workshop.
+You have been provided with three URLs; one is an OCI Object Storage location, another for signing in to Database Actions, and another for accessing a Jupyter lab.  
 
-You have also been provided a URI for accessing the Jupyter lab. In this lab, you will notice a Python/Flask application, as well as the files and scripts used to run the sample ORDS application.
-
-Finally, you have been provided a URI to OCI Cloud Storage. This is where the sample application project has been stored; in a `.zip` file.
+In this lab, you retrieve the sample application files, configure your sample application, and then execute commands to start-up this sample application.
 
 Some experience in shell commands, Python, JavaScript, and HTML are helpful but not necessary. We've designed this workshop so even the beginner can complete it!
 
@@ -39,7 +37,7 @@ This lab assumes you have:
 
 1. You have been provided three URLs. One for accessing Database Actions, one for accessing a Jupyter lab, and another for retrieving the sample application project file from OCI Cloud Storage. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ocw24flask.zip) to download a copy of the application's project files.  
 
-   If you are unable to click, use the direct link here:  
+   If you are unable to click the hyperlink, copy the direct link below, and navigate to it in a new browser tab:  
 
      ```html
      <copy>
