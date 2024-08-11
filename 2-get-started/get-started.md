@@ -14,6 +14,7 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
+* Obtain the application project contents from OCI Cloud Storage
 * Sign in to Database Actions as the `MOVIE` user
 * Create your ORDS APIs with the provided scripts
 * Add your ORDS APIs to your project's files
@@ -32,7 +33,11 @@ This lab assumes you have:
 * An Oracle account
 * All previous labs successfully completed
 
-## Task 1: Database Actions, Part I
+## Task 1: Retrieve the project from OCI Cloud Storage
+
+https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ocw24flask.zip
+
+## Task 2: Database Actions, Part I
 
 1. You have been provided two URLs. One for accessing Database Actions, the other for a Jupyter lab. Navigate to Database Actions using the provided URL.
 
@@ -77,7 +82,7 @@ This lab assumes you have:
 
       ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/></svg> ORDS APIs will be able to handle all of these various data types and send them to your application.
 
-## Task 2: Jupyter lab, Part I
+## Task 3: Jupyter lab, Part I
 
 1. Using the second URL you were provided, log in to your Jupyter lab. The password is the same: `LiveLabs.Rocks_99`
 
@@ -91,7 +96,7 @@ This lab assumes you have:
 
 4. Next, select all and copy the contents to your clipboard. Then, return to the SQL Worksheet.
 
-## Task 3: Database Actions, Part II
+## Task 4: Database Actions, Part II
 
 1. Navigate to the SQL Worksheet. Then paste the contents of the `moviestream_resource_module_definitions.sql` file to the SQL Worksheet.
   
@@ -124,7 +129,7 @@ This lab assumes you have:
 
    ![Adding the ORDS URIs to the clipboard](images/workshop-presentation-eleven.png " ")
 
-## Task 4: Jupyter Lab, Part II
+## Task 5: Jupyter Lab, Part II
 
 1. Navigate back to the Jupyter lab. Once there, locate the `ocw24flask` directory. Double click the `ordsflask.py` file.
 
@@ -144,7 +149,7 @@ This lab assumes you have:
 
    ![Modifying the function.js file.](images/workshop-presentation-fourteen.png " ")
 
-## Task 4: Start the Flask application
+## Task 6: Start the Flask application
 
 1. From the Jupyter Launcher, open a new Terminal. If you are not in the `ords24flask` folder, then `cd` to it. Issue the `ls` command to verify the `ordsflask.py` file exists.
 
