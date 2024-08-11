@@ -86,15 +86,13 @@ This lab assumes you have:
 
    ![Reviewing the results.](images/workshop-presentation-four.png " ")
 
-5. You may notice the varied data types in this table. To take a closer look at how this `MOVIE` table is structured, right-click on the `MOVIE` table, then select `Edit...`.
+5. You may notice the varied data types in this table. To take a closer look at how this `MOVIE` table is structured, right-click on the `MOVIE` table, then select `Edit...`. When the `Table Properties` slider appears, click `DDL`, then select the `Create` tab.  
 
-6. When the `Table Properties` slider appears, click `DDL`, then select the `Create` tab.
-
-   Notice the following data types:
+   Note the data types:
 
    ![Reviewing the Movie table properties.](images/workshop-presentation-four-dot-two.png " ")
 
-      ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/></svg> ORDS APIs will be able to handle all of these various data types and send them to your application.
+      > ORDS APIs will be able to handle all of these various data types and send them to your application.
 
 ## Task 3: Jupyter lab, Part I
 
@@ -102,7 +100,9 @@ This lab assumes you have:
 
    ![Login to Jupyter lab.](images/workshop-presentation-five.png " ")
   
-2. Once logged in, you will see several directories. Navigate to the `ocw24flask` directory, then the `scripts` directory.
+2. Once logged in, you will see several directories. You will need to upload the `ocw24flask` directory to the Jupyter lab.
+
+3. To do this you can simply drag the `.zip` file from your Downloads folder (or from where you saved it to in the earlier Task) into the Jupyter Lab (as seen in the image).click the then the `scripts` directory.
 
 3. Double-click the `moviestream_resource_module_definitions.sql` file. This file contains the definitions for your Resource Module, Templates, and Handlers, which are your ORDS APIs.
   
